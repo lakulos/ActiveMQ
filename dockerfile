@@ -1,4 +1,4 @@
-FROM openjdk:24-ea-jdk-nanoserver-1809
+FROM openjdk:17-jdk-alpine
 
 COPY . /usr/src/activeMQ
 
