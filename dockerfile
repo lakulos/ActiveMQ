@@ -1,9 +1,9 @@
 FROM openjdk:17-jdk-alpine
 
-COPY . /usr/src/activeMQ
+WORKDIR /activeMQ
 
-WORKDIR /usr/src/activeMQ
+COPY . /activeMQ
 
-RUN javac Main.java
+EXPOSE 8161 61616 61613 1883 5672 61614
 
-CMD ["java", "Main"]
+CMD ["/bin/sh", "-c", "/activeMQ/bin/activemq console"]
