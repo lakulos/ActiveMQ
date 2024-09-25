@@ -18,6 +18,6 @@ jobs:
       - name: build_image
         run: |
                 docker build -t activeMQ .
-                docker tag activeMQ:latest lakulos/activemq:latest
-                docker push lakulos/activemq:latest
+                docker tag activeMQ:6.1.3 lakulos/activemq:6.1.3
+                docker push lakulos/activemq:6.1.3
     
